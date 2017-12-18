@@ -38,11 +38,15 @@ function reverseInPlace(array) {
 
 // Lists
 function arrayToList(array) {
-  var list = {};
-  for (var i = 0; i < array.length; i++) {
-    list.value = array[i];
-    list.rest = list;
+  var list = {value: array[array.length-1], rest:null};
+  for (var i = array.length-2; i >= 0; i--) {
+    var temp = list;
+    list = {value: array[i], rest:temp};
   }
   return list;
 }
-console.log(arrayToList([1,2,3]));
+console.log(arrayToList([1,2,3,4,5]));
+
+function listToArray() {
+
+}
