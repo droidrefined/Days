@@ -10,7 +10,7 @@ function phi(table) {
 function hasEvent(event, entry) {
   return entry.events.indexOf(event) != -1;
 }
-
+//put peanut teeth when peanut is present and brushed teeth is not.
 for (var i = 0; i < JOURNAL.length; i++) {
   var entry = JOURNAL[i];
   if (hasEvent("peanuts", entry) &&
@@ -52,3 +52,12 @@ for (var i in finalData) {
 }
 
 console.log(JOURNAL);
+
+// make a better interface so you can add entries easy.
+// function addEntryEasy(squirrel) {
+//   var entry = {events: [], squirrel: squirrel}
+//   for (var i = 1; i < arguments.length; i++) {
+//     entry.events.push(arguments[i]);
+//     journal.push(entry);
+//   }
+// }
